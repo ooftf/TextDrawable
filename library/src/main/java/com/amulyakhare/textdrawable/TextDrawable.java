@@ -55,10 +55,12 @@ public class TextDrawable extends ShapeDrawable {
         borderPaint.setStyle(Paint.Style.STROKE);
         borderPaint.setStrokeWidth(borderThickness);
         borderPaint.setAntiAlias(true);
+        borderPaint.setFilterBitmap(true);
         // drawable paint color
         Paint paint = getPaint();
         paint.setColor(color);
-
+        paint.setAntiAlias(true);
+        setDither(true);
     }
 
     private int getDarkerShade(int color) {
@@ -69,6 +71,7 @@ public class TextDrawable extends ShapeDrawable {
 
     @Override
     public void draw(Canvas canvas) {
+        canvas.setDrawFilter(new PaintFlagsDrawFilter(0, Paint.ANTI_ALIAS_FLAG|Paint.FILTER_BITMAP_FLAG));
         super.draw(canvas);
         Rect r = getBounds();
 
