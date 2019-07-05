@@ -1,9 +1,7 @@
 ###TextDrawable 
 This light-weight library provides images with letter/text like the Gmail app. It extends the `Drawable` class thus can be used with existing/custom/network `ImageView` classes. Also included is a [fluent interface](http://en.wikipedia.org/wiki/Fluent_interface) for creating drawables and a customizable `ColorGenerator`.
 
-<p align="center"><img src ="https://github.com/amulyakhare/TextDrawable/blob/master/screens/screen1-material.png" width="350"/>
-<img src ="https://github.com/amulyakhare/TextDrawable/blob/master/screens/screen2-material.png" width="350"/>
-</p>
+[ ![Download](https://api.bintray.com/packages/ooftf/maven/text-drawable/images/download.svg) ](https://bintray.com/ooftf/maven/text-drawable/_latestVersion)
 
 ###How to use
 
@@ -12,12 +10,12 @@ This light-weight library provides images with letter/text like the Gmail app. I
 ```groovy
 repositories{
     maven {
-        url 'http://dl.bintray.com/amulyakhare/maven'
+        url 'https://dl.bintray.com/ooftf/maven'
     }
 }
 
 dependencies {
-    compile 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+    compile 'com.ooftf:text-drawable:1.0.0'
 }
 ```
 

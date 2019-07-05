@@ -3,7 +3,7 @@ package com.amulyakhare.td.sample;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -19,7 +19,7 @@ import com.amulyakhare.textdrawable.util.ColorGenerator;
 import java.util.Arrays;
 import java.util.List;
 
-public class ListActivity extends ActionBarActivity {
+public class ListActivity extends AppCompatActivity {
 
     private static final int HIGHLIGHT_COLOR = 0x999be6ff;
 
@@ -72,21 +72,21 @@ public class ListActivity extends ActionBarActivity {
             case DrawableProvider.SAMPLE_RECT_BORDER:
                 mDrawableBuilder = TextDrawable.builder()
                         .beginConfig()
-                            .withBorder(4)
+                        .withBorder(4)
                         .endConfig()
                         .rect();
                 break;
             case DrawableProvider.SAMPLE_ROUND_RECT_BORDER:
                 mDrawableBuilder = TextDrawable.builder()
                         .beginConfig()
-                            .withBorder(4)
+                        .withBorder(4)
                         .endConfig()
                         .roundRect(10);
                 break;
             case DrawableProvider.SAMPLE_ROUND_BORDER:
                 mDrawableBuilder = TextDrawable.builder()
                         .beginConfig()
-                            .withBorder(4)
+                        .withBorder(4)
                         .endConfig()
                         .round();
                 break;
@@ -148,8 +148,7 @@ public class ListActivity extends ActionBarActivity {
                 holder.imageView.setImageDrawable(mDrawableBuilder.build(" ", 0xff616161));
                 holder.view.setBackgroundColor(HIGHLIGHT_COLOR);
                 holder.checkIcon.setVisibility(View.VISIBLE);
-            }
-            else {
+            } else {
                 TextDrawable drawable = mDrawableBuilder.build(String.valueOf(item.data.charAt(0)), mColorGenerator.getColor(item.data));
                 holder.imageView.setImageDrawable(drawable);
                 holder.view.setBackgroundColor(Color.TRANSPARENT);
